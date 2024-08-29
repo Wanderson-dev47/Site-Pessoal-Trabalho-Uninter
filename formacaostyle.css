@@ -1,0 +1,244 @@
+:root { /*Paleta de cores*/
+    --dark-purple: #3D0A49;
+    --violet: #5015BD;
+    --deep-sky-blue: #027FE9;
+    --bright-cyan: #00CAF8;
+    --charcoal-black: #1B1B1E;
+    --lavender-mist: #E0DAF7;
+}
+
+header h1 {
+    margin-top: 40px;
+    color: var(--lavender-mist);
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+body {
+    margin-bottom: 50px;
+}
+
+h1 {
+    color: var(--lavender-mist);
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.container-ensino  {
+    display:flex;
+    width: 955px;
+    height: 250px;
+    align-items: center;
+    background-color: #2B447D;
+    border-radius: 50px 20px;
+    padding: 20px 30px;
+    color: var(--lavender-mist);
+    margin-bottom: 50px;
+
+    transition: all 0.4s ease;
+}
+
+.container-ensino img {
+    width: 237px;
+    height: 158px;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.container-ensino h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.container-ensino span {
+    color: var(--bright-cyan);
+}
+
+.container-ensino:hover {
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px) ;
+    box-shadow: 0px 0px 10px rgba(65, 105, 225, .8);
+    transform: scale(1.02);
+    background-color: #25578F;
+}
+
+
+.logo-animada {
+    margin-top: 30px;
+    transform: translateX(-5px);
+}
+
+.icon-logo {
+    margin-bottom: 10px;
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg); 
+    }
+    50% {
+        transform: translateY(-10px) rotate(0deg); 
+    }
+}
+
+.sombra svg {
+    animation: pulsar 5s ease-in-out infinite;
+}
+
+@keyframes pulsar {
+    0%, 100% {
+        transform: scale(1.2);
+    }
+    50% {
+        transform: scale(1);
+        opacity: 50%;
+    }
+}
+
+.cortina-tecnologias {
+    width: 100%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    background-color: #1B1B1E;
+}
+
+.setas svg {
+    animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0%, 100% {
+        filter: brightness(100%);
+    }
+    50% {
+        filter: brightness(130%); 
+    }
+}
+
+.area-certificados h1 {
+    margin-top: 50px;
+}
+
+.card-certificados {
+    display:flex;
+    width: 955px;
+    height: 115px;
+    background-color: var(--charcoal-black);
+    border-radius: 20px;
+    color: var(--lavender-mist);
+    box-shadow: 0 0 0 1px var(--bright-cyan);
+    cursor: pointer;
+
+    transition: all 1s ease;
+}
+
+/*Para o texto do card*/
+.content {
+    align-content: center;
+    transform: translateX(50%);
+} 
+
+.titulo-dio {
+    font-size: 24px;
+}
+
+.txt-comunicativo {
+    font-size: 17px;
+}
+
+.icon-dio svg {
+    width: 90%;
+}
+
+
+.card-certificados:hover {
+    height: 120px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0px 0px 10px rgba(65, 105, 225, .8);
+    transform: scale(1.02);
+    background-color: #25578F;
+}
+
+.card-certificados:active {
+    border: 2px solid var(--deep-sky-blue);
+    border-radius: 20px;
+    backdrop-filter: blur(30px) opacity(60%);
+    box-shadow: 0px 0px 15px rgba(0, 191, 255, 1); 
+    transform: scale(0.98); 
+    transition: all 0.04s ease;
+}
+
+.lista-certificados {
+    display: block;
+    transform: translateX(5%);
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.certificado {
+    margin-bottom: 20px; 
+    width: 859px; 
+    height: 558px;
+    border-radius: 5px;
+    border: 2px var(--deep-sky-blue);
+    border-style:double;
+}
+
+.display-certificados {
+    display: flex;
+    margin-top: 20px;
+    width: 955px;
+    height: 650px;
+    background-color: var(--violet);
+    border-radius: 20px;
+    color: var(--lavender-mist);
+    box-shadow: 0 0 0 1px var(--bright-cyan);
+    overflow-y: scroll; /* Exibe apenas a rolagem vertical */
+    overflow-x: hidden; 
+}
+
+/* Personalização da barra de rolagem para WebKit */
+.display-certificados::-webkit-scrollbar {
+    width: 12px; 
+    height: 0; 
+}
+
+.display-certificados::-webkit-scrollbar-track {
+    background: var(--bright-cyan); 
+    border-radius: 20px; 
+}
+
+.display-certificados::-webkit-scrollbar-thumb {
+    background-color: var(--deep-sky-blue); 
+    border-radius: 20px; 
+    border: 3px solid var(--bright-cyan); 
+}
+
+.display-certificados::-webkit-scrollbar-thumb:hover {
+    background-color: var(--dark-purple); 
+}
+
+/* Personalização da rolagem em Firefox */
+.display-certificados {
+    scrollbar-width: 12px; 
+    scrollbar-color: var(--deep-sky-blue) var(--charcoal-black); /* Cor da "mão" e da trilha */
+}
+
+.principal {
+    animation: zoomInUp 2.5s forwards;
+}
+
+@keyframes zoomInUp {
+    0% {
+        opacity: 0;
+        transform: scale(0.9) translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}

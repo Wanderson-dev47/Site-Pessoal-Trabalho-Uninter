@@ -1,0 +1,230 @@
+:root { /*Paleta de cores*/
+    --dark-purple: #3D0A49;
+    --violet: #5015BD;
+    --deep-sky-blue: #027FE9;
+    --bright-cyan: #00CAF8;
+    --charcoal-black: #1B1B1E;
+    --lavender-mist: #E0DAF7;
+}
+
+main {
+    display: block;
+    align-items: center;
+}
+
+.foto-perfil svg {
+    margin-top: 50px;
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    outline: 8px solid var(--bright-cyan);
+    outline-offset: 2px;
+    outline-style: groove;
+}
+
+.foto-perfil {
+    animation: zoomInUp 2.5s forwards;
+}
+
+.foto-perfil svg {
+    animation: pulsar 7s ease-in-out infinite;
+}
+
+.foto-perfil svg:active {
+    animation: pulsar 2s ease-in-out infinite;
+}
+
+@keyframes pulsar {
+    0%, 100% {
+        transform: scale(1); 
+    }
+    50% {
+        transform: scale(1.03); 
+    }
+}
+
+
+.apresentacao {
+    margin-top: 50px;
+    position: relative;
+}
+
+.plano1 {
+    opacity: 80%;
+    transition: opacity 0.3s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.plano1:hover {
+    opacity: 100%;
+    transform: rotateY(10deg) scale(1.05);
+}
+
+
+.plano1 p {
+    width: 611px;
+    height: 280px;
+    font-size: 17px;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-30%, -50%);
+    text-align: left;
+    color: var(--dark-purple);
+    z-index: 2;
+}
+
+/*Definindo o elemento que ficará atrás e ajustado com o primeiro elemento*/
+.plano2 {
+    transform: translate(25%, -50%);
+}
+
+/*Definição dos elementos que ficará na frente e atrás*/
+.container-plano1 {
+    position: relative;
+    z-index: 2;
+
+    animation: fadeInUp 2.5s forwards;
+}
+
+.container-plano2 {
+    position: absolute;
+    z-index: 1;
+    animation: zoomInUp 2s forwards;
+}
+
+.hobbie, .carreira-anterior {
+    position: relative;
+    width: 955px;
+    height: 545px;
+    margin-top: 200px;
+    background-color: var(--violet);
+    border-radius: 20px;
+    padding: 17px 24px;
+    opacity: 80%;
+    z-index: 2;
+
+    transition: all 0.4s ease;
+}
+
+.hobbie:hover, .carreira-anterior:hover{
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px) opacity(50%);
+    opacity: 100%;
+    box-shadow: 0px 0px 10px rgba(65, 105, 225, .8);
+    transform: scale(1.02);
+}
+
+.ellipse {
+    position: relative;
+    width: 1005px;
+    height: 198px;
+    background: linear-gradient(to bottom, #440E77, 10%,  #7E1ADD 100%);
+    border-radius: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.container-elipse {
+    animation: fadeInUp 2.5s forwards;
+}
+
+
+.hobbie img {
+    width: 491px;
+    height: 327px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(59, 59, 59, 0.9);
+    float: left;
+}
+
+.hobbie h4 {
+    transform: translateY(100%);
+    color: var(--lavender-mist);
+    font-size: 40px;
+}
+
+.hobbie:hover h4 span {
+    color: var(--bright-cyan);
+    transition: all 2.5s ease;
+}
+
+.hobbie p {
+    margin-top: 3%;
+    text-align:justify;
+    color: var(--lavender-mist);
+    font-size: 17px;
+    float:inline-end;
+}
+
+.carreira-anterior {
+    margin-top: 40px;
+    padding-top: 40px;
+    width: 955px;
+    height: 640px;
+    color: var(--lavender-mist);
+}
+
+.carreira-anterior .titulo-carreira, .conteudo-carreira {
+    float: left;
+    width: 480px;
+}
+
+.carreira-anterior .conteudo-carreira {
+    font-size: 17px;
+    text-align: left;
+    margin-bottom: 10%;
+}
+
+.titulo-carreira {
+    margin-bottom: 5%;
+    font-size: 40px;
+}
+
+.combatente {
+    width: 365px;
+    height: 487px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(59, 59, 59, 0.9);
+}
+
+.carreira-anterior h6 {
+    font-size: 14px;
+}
+
+.carreira-anterior:hover h4 span {
+    color: var(--bright-cyan);
+    transition: all 2.5s ease;
+}
+
+.carreira-anterior:hover h6 span {
+    color: var(--bright-cyan);
+    transition: all 2.5s ease;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container-hobbie, .container-carreira-anterior {
+    animation: zoomInUp 2s forwards;
+}
+
+/* Animação de zoom-in e deslocamento */
+@keyframes zoomInUp {
+    0% {
+        opacity: 0;
+        transform: scale(0.9) translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}

@@ -1,0 +1,87 @@
+:root { /*Paleta de cores*/
+    --violet: #5015BD;
+    --dark-purple: #3D0A49;
+    --lavender-mist: #E0DAF7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Aldrich', sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, var(--dark-purple), 70%, var(--charcoal-black) 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: flex-start; 
+}
+
+nav {
+    display: flex;
+    justify-content: center; 
+    background-color: var(--violet);
+    padding: 6px 0;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+ul {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    list-style-type: none;
+    gap: 120px; 
+}
+
+li {
+    align-items: center;
+}
+a {
+    text-decoration: none;
+    font-size: 13px;
+    color: var(--lavender-mist);
+}
+
+p {
+    margin-top: 2px;
+}
+
+
+/* Animações para hover e active */
+.home svg {
+    transition: opacity 0.3s ease-in-out, transform 0.1s ease-in-out;
+}
+
+.home svg:hover {
+    opacity: 80%;
+    transform: rotate(5deg) scale(1.1);
+}
+
+.home svg:active {
+    transform: scale(0.9) rotate(-5deg); 
+}
+
+.sobre-mim, .formacao, .portfolio, .contato{
+    transition: opacity 0.3s ease-in-out, transform 0.1s ease-in-out;
+}
+
+.sobre-mim:hover, .formacao:hover, .portfolio:hover, .contato:hover {
+    opacity: 80%;
+    transform: translateY(-3px);
+}
+
+.sobre-mim:active svg, .formacao:active svg, .portfolio:active svg, .contato:active svg {
+    width: 37px;
+    height: 36px;
+    transform: scale(0.9) rotate(-5deg); 
+    transition: transform 0.1s ease-in-out;
+}

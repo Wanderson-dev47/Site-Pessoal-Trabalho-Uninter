@@ -1,0 +1,133 @@
+:root { /*Paleta de cores*/
+    --dark-purple: #3D0A49;
+    --violet: #5015BD;
+    --deep-sky-blue: #027FE9;
+    --bright-cyan: #00CAF8;
+    --charcoal-black: #1B1B1E;
+    --lavender-mist: #E0DAF7;
+}
+
+main {
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+p {
+    font-family: 'Aldrich', sans-serif;
+}
+
+.conteudo-inicial {
+    transform: translateX(110px);
+}
+
+.container-apresentacao {
+    display: flex;
+    align-items:center;
+}
+
+
+.apresentacao1 {
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0; 
+    animation: fadeInUp 1s forwards; 
+}
+
+/* Estilização do header */
+.fundo-titulo header {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-30%, -50%);
+    text-align: left;
+    width: 100%;
+    color: var(--lavender-mist);
+}
+
+/* Estlização do h1 */
+.fundo-titulo h1 {
+    font-size: 40px;
+
+    opacity: 0; 
+    animation: fadeInUp 1s 1s forwards; 
+}
+
+/* Estilazação do meu nome */
+span {
+    font-family: 'Bebas Neue', sans-serif;
+    color: var(--bright-cyan);
+}
+
+.apresentacao2 {
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.phone-human-hand p {
+    position: absolute;
+    top: 33%;
+    left: 42%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    width: 100%;
+    color: var(--dark-purple);
+    font-size: 14px;
+    width: 150px;
+    height: 150px;
+    z-index: 2;
+
+    opacity: 0;
+    animation: opacity 1s 2s forwards;
+}
+
+.phone-human-hand svg {
+    z-index: 1;
+    opacity: 0; 
+    animation: fadeInUp 1s 1.5s forwards;
+}
+
+
+
+/* Animação de fade-in e deslocamento */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animação de zoom-in e deslocamento */
+@keyframes zoomInUp {
+    0% {
+        opacity: 0;
+        transform: scale(0.9) translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/*Animação somente da opacidade*/
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

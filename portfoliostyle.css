@@ -1,0 +1,79 @@
+:root { /*Paleta de cores*/
+    --dark-purple: #3D0A49;
+    --violet: #5015BD;
+    --deep-sky-blue: #027FE9;
+    --bright-cyan: #00CAF8;
+    --charcoal-black: #1B1B1E;
+    --lavender-mist: #E0DAF7;
+}
+
+.conteudo {
+    animation: zoomInUp 2s forwards;
+}
+
+header {
+    margin-top: 50px;
+    color: var(--lavender-mist);
+}
+
+h1 {
+    width: 862px;
+    font-size: 40px;
+}
+
+p {
+    color: var(--lavender-mist);
+}
+
+.github-user {
+    display: flex;
+    margin-top: 40px;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 40px;
+    color: var(--bright-cyan);
+    margin-bottom: 40px;
+}
+
+.container-mobile {
+    margin-bottom: 40px;
+}
+
+img {
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 1); 
+}
+
+img:hover{
+    border: 2px solid var(--deep-sky-blue);
+    border-radius: 20px;
+    backdrop-filter: blur(30px) opacity(60%);
+    box-shadow: 0px 0px 15px rgba(0, 191, 255, 1); 
+    transform: scale(0.98); 
+    transition: all 0.3s ease;
+}
+
+img:active {
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px) opacity(50%);
+    box-shadow: 0px 0px 10px rgba(65, 105, 225, .8);
+    transform: scale(1.02);
+    transition: all 0.1s ease;
+}
+
+
+@keyframes zoomInUp {
+    0% {
+        opacity: 0;
+        transform: scale(0.9) translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
