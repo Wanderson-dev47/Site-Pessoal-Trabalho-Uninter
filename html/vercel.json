@@ -1,9 +1,0 @@
-{
-    "rewrites": [
-      { "source": "/contato", "destination": "/contato.html" },
-      { "source": "/formacao", "destination": "/formacao.html" },
-      { "source": "/portfolio", "destination": "/portfolio.html" },
-      { "source": "/sobre", "destination": "/sobre.html" }
-    ]
-  }
-  
