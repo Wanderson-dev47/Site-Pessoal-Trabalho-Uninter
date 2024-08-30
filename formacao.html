@@ -240,7 +240,7 @@
             <center>
                 <h1>Área de Certificados</h1>
 
-                <div class="card-certificados">
+                <div class="card-certificados" onclick="exibirLista()">
 
                     <div class="icon-dio">
                         <svg width="254" height="116" viewBox="0 0 254 116" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -267,9 +267,9 @@
             </center>
 
         </section>
-        
-        <section class="display-certificados principal">
-
+    
+        <section class="display-certificados hide">
+            
             <section class="lista-certificados">  
                 <p style="margin-bottom: 4px;">Total: 23</p>
                 <img class="certificado" src="assets/certificados/Certificado1.png">
@@ -309,5 +309,7 @@
             document.getElementById('navbar').innerHTML = data;
           });
       </script>
+
+    <script src="formacaoapp.js"></script>
 </body>
 </html>
